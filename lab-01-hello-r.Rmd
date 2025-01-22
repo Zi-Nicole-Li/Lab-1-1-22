@@ -52,21 +52,20 @@ Once you’ve cleaned up the text, add your own explanation or observations here
 
 ### Exercise 3
 
-This is your turn to write the code and narrative for the star dataset. Follow the same steps as above to complete the analysis. Don't forget to label your chunks appropriately!
-
-Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
-To finish, clean up the narrative by removing these instructions.
-
 ```{r plot-star}
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
 
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+
+dino_data %>%
+  summarize(r = cor(x, y))
 ```
 
-I'm some filler text, you should replace me with more meaningful text...
+# the r=-0.06, not a strong correlation tho. 
 
-```{r cor-star}
-
-```
-Add your explanation here—what did you notice?
+# explanation: the correaltion here is the same, which make sense, cause it's the same dataset, we just plot it into different shape. 
 
 
 ### Exercise 4

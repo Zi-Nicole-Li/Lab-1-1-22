@@ -70,15 +70,19 @@ dino_data %>%
 
 ### Exercise 4
 
-Add your code and narrative to complete this exercise. Use the conventions from the previous exercises to name your chunks and organize your work.
+```{r plot & cor for circle}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
 
-```{r}
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
 
-```{r}
-
-```
+# compare with Ex 3. the r for Ex. 4 increase a bit, now it's -0.068, still not a strong correlation. 
+# I'd like to change my explanation I made for Ex.3, they are not the same dataset, the command "filter" already select the data form the whole dataset. 
 
 ### Exercise 5
 

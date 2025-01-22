@@ -1,16 +1,18 @@
 ---
 title: "Lab 01 - Hello R"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Zi Li"
+date: "1/22"
 output: 
   html_document: 
     fig_height: 4
     fig_width: 9
 ---
 
-## Load packages and data
+# Load packages and data
 
 ```{r load-packages, message=FALSE}
+install.packages("tidyverse")
+install.packages("datasauRus")
 library(tidyverse) 
 library(datasauRus)
 ```
@@ -19,7 +21,13 @@ library(datasauRus)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+```{r}
+datasaurus_dozen %>%
+  count(dataset) %>%
+  print(13)
+```
+  
+# answer for Ex 1: we have 13 rows and 2 columns. we have these variables: away, bullseye, circle, dino, dots, h_lines, high_lines, slant_down, slant_up, star, v_lines, wide_lines, x_shape.  
 
 ### Exercise 2
 

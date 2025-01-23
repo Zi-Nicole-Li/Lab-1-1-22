@@ -4,8 +4,8 @@ author: "Zi Li"
 date: "1/22"
 output: 
   html_document: 
+    fig_width: 6
     fig_height: 4
-    fig_width: 9
 ---
 
 # Load packages and data
@@ -86,9 +86,28 @@ circle_data %>%
 
 ### Exercise 5
 
-This is your final exercise! Add code and narrative as needed. Be creative and show off what you’ve learned so far.
-Add code and narrative as needed.
+```{r for all}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset)) +
+  geom_point() +
+  facet_wrap(~dataset, ncol = 3) +
+  theme(legend.position = "none")
 
-To add additional R chunks, you can either type the backticks, curly braces, and the letter `r`, or use the "Insert Chunk" button above (the green C+ icon). Have fun!
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(r = cor(x, y)) %>%
+  print(13)
 
+```
+# I'm just playing around ⬇️
+```{r}
+bullseye_data <- datasaurus_dozen %>%
+  filter(dataset == "bullseye")
+
+ggplot(data = bullseye_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+
+bullseye_data %>%
+  summarize(r = cor(x, y))
+
+```
 

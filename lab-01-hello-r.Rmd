@@ -3,7 +3,7 @@ title: "Lab 01 - Hello R"
 author: "Zi Li"
 date: "1/22"
 output: 
-  html_document: 
+  github_document: 
     fig_width: 6
     fig_height: 4
 ---

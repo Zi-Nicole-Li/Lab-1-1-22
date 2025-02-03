@@ -11,8 +11,8 @@ output:
 # Load packages and data
 
 ```{r load-packages, message=FALSE}
-install.packages("tidyverse")
-install.packages("datasauRus")
+#install.packages("tidyverse")
+#install.packages("datasauRus")
 library(tidyverse) 
 library(datasauRus)
 ```
